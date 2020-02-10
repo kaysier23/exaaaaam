@@ -34,19 +34,17 @@ li a:hover {
  
  h1{
  text-align: center;
- color: white;
+ color: black;
  }
- 
- h2{
- color: white;
- }
- 
  .container{
  border: 2px white;
   height: auto;
   width: auto;
   padding: 0px;
   margin: auto;
+ }
+ .container li{
+ color: white;
  }
 </style>
 </head>
@@ -71,10 +69,10 @@ li a:hover {
 <html>
  <div class = " container">
    <ul>
-            <h2><a href = '$link'> $title </a></h2>
+            <h2><a href = '$link'> <?php echo $title ?> </a></h2>
               <ul>
-              <li>$description</li>
-              <li>$pubDate</li>
+              <li><?php echo $description ?></li>
+              <li><?php echo $pubDate ?></li>
                   </ul>
     </ul>
  </div>
