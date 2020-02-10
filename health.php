@@ -1,6 +1,6 @@
 <?php
  $domOBJ = new DOMDocument();
- $domOBJ->load("https://www.sciencedaily.com/rss/top/science.xml"); 
+ $domOBJ->load("https://www.sciencedaily.com/rss/top/health.xml"); 
  
  $content = $domOBJ->getElementsByTagName("item");
  
@@ -60,7 +60,7 @@ li a:hover {
 </body>
 </html>
 
-<h1>Top Science News -- ScienceDaily</h1>
+<h1>Top Health News -- ScienceDaily</h1>
 
  <?php
  foreach( $content as $data )
