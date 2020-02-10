@@ -30,7 +30,7 @@ li a {
 }
 
 li a:hover {
-  background-color: #000;
+  background-color: white;
 }
  
   h1{
@@ -40,8 +40,8 @@ li a:hover {
  .container{
   height: auto;
   width: auto;
-  padding: 0px;
-  margin: auto;
+  padding: 0;
+  margin: 0;
  }
  .container li{
  color: white;
@@ -51,8 +51,10 @@ li a:hover {
 <body>
 
 <ul>
-  <li><a class="active" href="index.php">science news</a></li>
-  <li><a href="tech.php">technology news</a></li>
+  <li><a class="active" href="index.php">SCIENCE NEWS</a></li>
+  <li><a href="tech.php">TECHNOLOGY NEWS</a></li>
+  <li><a class="active" href="health.php">HEALTH NEWS</a></li>
+  <li><a href="envi.php">ENVIRONMENT NEWS</a></li>
 </ul>
 
 </body>
