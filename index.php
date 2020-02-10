@@ -62,6 +62,8 @@ li a:hover {
 
 <h1>Top Science News -- ScienceDaily</h1>
 
+<html>
+ <div class = " container">
  <?php
  foreach( $content as $data )
  { ?>
@@ -71,8 +73,6 @@ li a:hover {
    $description = $data->getElementsByTagName("description")->item(0)->nodeValue;
    $pubDate = $data->getElementsByTagName("pubDate")->item(0)->nodeValue;
    ?>
-<html>
- <div class = " container">
    <ul>
             <h2><a href = '$link'> <?php echo $title ?> </a></h2>
               <ul>
@@ -80,8 +80,8 @@ li a:hover {
               <li><?php echo $pubDate ?></li>
                   </ul>
     </ul>
- </div>
-</html>
 <?php
  }
 ?>
+ </div>
+</html>
