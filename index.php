@@ -70,7 +70,7 @@ li a:hover {
    $link = $data->getElementsByTagName("link")->item(0)->nodeValue;
    $description = $data->getElementsByTagName("description")->item(0)->nodeValue;
    $pubDate = $data->getElementsByTagName("pubDate")->item(0)->nodeValue;
-  
+   ?>
 <html>
  <div class = " container">
    <ul>
@@ -82,7 +82,6 @@ li a:hover {
     </ul>
  </div>
 </html>
- ?>
 <?php
  }
 ?>
