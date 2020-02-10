@@ -1,10 +1,11 @@
 <?php
  $domOBJ = new DOMDocument();
- $domOBJ->load("https://www.sciencedaily.com/rss/top/technology.xml");  
+ $domOBJ->load("https://www.sciencedaily.com/rss/top/technology.xml"); 
  
  $content = $domOBJ->getElementsByTagName("item");
  
  ?>
+
 <html>
 <head>
 <style>
@@ -29,19 +30,18 @@ li a {
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: white;
 }
  
- h1{
+  h1{
  text-align: center;
  color: black;
  }
  .container{
- border: 2px white;
   height: auto;
   width: auto;
-  padding: 0px;
-  margin: auto;
+  padding: 0;
+  margin: 0;
  }
  .container li{
  color: white;
@@ -49,13 +49,18 @@ li a:hover {
 </style>
 </head>
 <body>
+
 <ul>
-  <li><a class="active" href="index.php">science news</a></li>
-  <li><a href="tech.php">technology news</a></li>
+  <li><a class="active" href="index.php">SCIENCE NEWS</a></li>
+  <li><a href="tech.php">TECHNOLOGY NEWS</a></li>
+  <li><a class="active" href="health.php">HEALTH NEWS</a></li>
+  <li><a href="envi.php">ENVIRONMENT NEWS</a></li>
 </ul>
+
 </body>
 </html>
-  <h1>Top Technology News -- ScienceDaily</h1>
+
+<h1>Latest Science News -- ScienceDaily</h1>
 
  <?php
  foreach( $content as $data )
