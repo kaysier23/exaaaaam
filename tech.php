@@ -5,7 +5,7 @@
  $content = $domOBJ->getElementsByTagName("item");
  
  ?>
-  <h1>SCIENCE NEWS FROM THE NEW YORK TIMES</h1>
+  <h1>TOP NEWS FOR TECHNOLOGY</h1>
 
     <?php
  foreach( $content as $data )
