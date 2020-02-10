@@ -31,33 +31,45 @@ li a {
 li a:hover {
   background-color: #111;
 }
+ 
+ h1{
+ text-align: center;
+ color: white;
+ }
+ 
+ h2{
+ color: white;
+ }
+ 
+ .container{
+ border: 2px white;
+  height: auto;
+  width: auto;
+  padding: 0px;
+  margin: auto;
+ }
 </style>
 </head>
 <body>
-
 <ul>
   <li><a class="active" href="index.php">science news</a></li>
   <li><a href="tech.php">technology news</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
 </ul>
-
 </body>
 </html>
-  <h1>TOP NEWS FOR TECHNOLOGY</h1>
+  <h1>Top Technology News -- ScienceDaily</h1>
 
-    <?php
+ <?php
  foreach( $content as $data )
  { ?>
- 
-
-
 <?php
    $title = $data->getElementsByTagName("title")->item(0)->nodeValue;
    $link = $data->getElementsByTagName("link")->item(0)->nodeValue;
    $description = $data->getElementsByTagName("description")->item(0)->nodeValue;
    $pubDate = $data->getElementsByTagName("pubDate")->item(0)->nodeValue;
-   echo "
+    ?>
+<html>
+ <div class = " container">
    <ul>
             <h2><a href = '$link'> $title </a></h2>
               <ul>
@@ -65,8 +77,8 @@ li a:hover {
               <li>$pubDate</li>
                   </ul>
     </ul>
-            ";
-  ?>
+ </div>
+</html>
 <?php
  }
 ?>
