@@ -11,10 +11,6 @@
  foreach( $content as $data )
  { ?>
  
-
-<body>
- <link rel="stylesheet" href="style.css" type="text/css">
- <container>
 <?php
    $title = $data->getElementsByTagName("title")->item(0)->nodeValue;
    $link = $data->getElementsByTagName("link")->item(0)->nodeValue;
@@ -30,8 +26,6 @@
     </ul>
             ";
   ?>
-</container>
-</body>
 <?php
  }
 ?>
