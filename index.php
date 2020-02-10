@@ -30,7 +30,7 @@ li a {
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: #000;
 }
  
   h1{
