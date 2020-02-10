@@ -32,6 +32,20 @@ li a {
 li a:hover {
   background-color: #111;
 }
+ 
+  h1{
+ text-align: center;
+ color: black;
+ }
+ .container{
+  height: auto;
+  width: auto;
+  padding: 0px;
+  margin: auto;
+ }
+ .container li{
+ color: white;
+ }
 </style>
 </head>
 <body>
