@@ -60,7 +60,7 @@ li a:hover {
 </body>
 </html>
 
-<h1>Latest Science News -- ScienceDaily</h1>
+<h1> Top Technology News -- ScienceDaily </h1>
 
  <?php
  foreach( $content as $data )
