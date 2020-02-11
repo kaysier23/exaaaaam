@@ -1,11 +1,3 @@
-<?php
- $domOBJ = new DOMDocument();
- $domOBJ->load("https://www.sciencedaily.com/rss/top.xml"); 
- 
- $content = $domOBJ->getElementsByTagName("item");
- 
- ?>
-
 <html>
 <head>
 <style>
@@ -19,6 +11,7 @@ ul {
 
 li {
   float: left;
+  color: white;
 }
 
 li a {
@@ -30,7 +23,7 @@ li a {
 }
 
 li a:hover {
-  background-color: white;
+  background-color: #111;
 }
  
   h1{
@@ -51,7 +44,7 @@ li a:hover {
 <body>
 
 <ul>
-  <li><a class="active" href="index.php">SCIENCE NEWS</a></li>
+  <li><a class="active" href="index.php">TOP NEWS</a></li>
   <li><a href="tech.php">TECHNOLOGY NEWS</a></li>
   <li><a class="active" href="health.php">HEALTH NEWS</a></li>
   <li><a href="envi.php">ENVIRONMENT NEWS</a></li>
@@ -60,11 +53,17 @@ li a:hover {
 </body>
 </html>
 
-<h1>Top Science News -- ScienceDaily</h1>
 
-<html>
- <div class = " container">
- <?php
+<?php
+ $domOBJ = new DOMDocument();
+ $domOBJ->load("https://www.sciencedaily.com/rss/top.xml"); 
+ 
+ $content = $domOBJ->getElementsByTagName("item");
+ ?>
+
+  <h1>Top News -- ScienceDaily</h1>
+
+    <?php
  foreach( $content as $data )
  { ?>
 <?php
@@ -72,16 +71,16 @@ li a:hover {
    $link = $data->getElementsByTagName("link")->item(0)->nodeValue;
    $description = $data->getElementsByTagName("description")->item(0)->nodeValue;
    $pubDate = $data->getElementsByTagName("pubDate")->item(0)->nodeValue;
-   ?>
+  echo "
    <ul>
-            <h2><a href = '$link'> <?php echo $title ?> </a></h2>
+            <h2><a href = '$link'> $title </a></h2>
               <ul>
-              <li><?php echo $description ?></li>
-              <li><?php echo $pubDate ?></li>
+              <li>$description</li>
+              <li>$pubDate</li>
                   </ul>
     </ul>
+            ";
+  ?>
 <?php
  }
 ?>
- </div>
-</html>
